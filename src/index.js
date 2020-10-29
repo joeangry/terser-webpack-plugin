@@ -599,6 +599,8 @@ class TerserPlugin {
   apply(compiler) {
     const { output } = compiler.options;
 
+    console.log('Hello World from plugin hosted on GitHub');
+
     if (typeof this.options.terserOptions.ecma === 'undefined') {
       this.options.terserOptions.ecma = TerserPlugin.getEcmaVersion(
         output.environment || {}
